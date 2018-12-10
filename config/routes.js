@@ -10,6 +10,9 @@ module.exports = function(server) {
     //Registrando os métodos API no router
     const itemService = require('../items/itemService')
     const leadService = require('../leads/leadService')
+    const distanceService = require('../items/distance/distanceService')
+
     itemService.register(router, '/item')
     leadService.register(router, '/leads')
+    distanceService.register(router, '/distance')
 }
