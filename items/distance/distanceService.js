@@ -40,4 +40,3 @@ router.get('/api/distance', (req, res) => {
 
 module.exports = Distance
 module.exports = router;
-
