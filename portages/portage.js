@@ -22,8 +22,8 @@ let portageSchema = new mongoose.Schema({
     },
     distance: {type: String, required: true },
     date: {
-        startDate: {type: Date, required: true },
-        endDate: {type: Date, required: true }
+        startDate: {type: Date, required: false },
+        endDate: {type: Date, required: false }
     },
     period: {
         hour: {type: String, required: true },
