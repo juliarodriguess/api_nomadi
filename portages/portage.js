@@ -6,35 +6,35 @@ let portageSchema = new mongoose.Schema({
     _id: { type: mongoose.Schema.Types.ObjectId, auto: true },
     contact: {
         name: { type: String, required: true },
-        phone: { type: Number, required: true },
-        email: { type: String, required: true }
+        phone: { type: Number, required: false },
+        email: { type: String, required: false }
     },
     origin: {  
-        address: { type:String, required: true },
-        propertyType: { type:String, required: true },
+        address: { type:String, required: false },
+        propertyType: { type:String, required: false },
         apartment: { type:String, required: false },
         hasLift: { type:Boolean, required: false },
         stage: { type:String, required: false },
         comments: { type:String, required: false }
     },
     destination:{
-        address: { type:String, required: true },
-        propertyType: { type:String, required: true },
+        address: { type:String, required: false },
+        propertyType: { type:String, required: false },
         apartment: { type:String, required: false },
         hasLift: { type:Boolean, required: false },
         stage: { type:String, required: false },
         comments: { type:String, required: false }
     },
-    distance: {type: String, required: true },
+    distance: {type: String, required: false },
     date: {
         startDate: {type: Date, required: false },
         endDate: {type: Date, required: false }
     },
     period: {
-        hour: {type: String, required: true },
+        hour: {type: String, required: false },
         comments: {type: String, required: false }
     },
-    listOfItems: { type: Array, required: true }
+    listOfItems: { type: Array, required: false }
 })
 
 let portage = restful.model("portage", portageSchema)
