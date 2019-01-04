@@ -6,7 +6,7 @@ let portageSchema = new mongoose.Schema({
     _id: { type: mongoose.Schema.Types.ObjectId, auto: true },
     contact: {
         name: { type: String, required: true },
-        phone: { type: Number, required: true },
+        phone: { type: String, required: true },
         email: { type: String, required: true }
     },
     origin: {  
